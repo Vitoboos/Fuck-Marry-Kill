@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="{%  static 'CSS/home.css' %}">
+
+    <title> Home </title>
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1> Fuck, Marry, Kill!</h1>
+
+    </header>
+
+    <nav>
+
+        <ul>
+
+            <li> <a class="navlink" href="{% url 'home'  %}"> Home          </a>  </li>
+            <li> <a class="navlink" href="{% url 'settings'  %}"> Settings  </a> </li>
+            <Li> <a class="navlink" href="{% url 'play'  %}"> Play        </a> </Li>
+            
+        </ul>
+    
+    </nav>
+
+    <script>
+
+        $(".navlink").click(function(){
+
+            localStorage.clear()
+
+        })
+
+    </script>
+
+</body>

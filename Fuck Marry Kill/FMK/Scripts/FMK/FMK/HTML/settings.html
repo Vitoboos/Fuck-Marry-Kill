@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="{%  static 'CSS/settings.css' %}">
+    <script src="{% static 'JS/jquery-3.6.0.min.js' %}"> </script>
+
+    <title> Home </title>
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1> Fuck, Marry, Kill!</h1>
+
+    </header>
+
+    <nav>
+
+        <ul>
+
+            <li> <a class="navlink" href="{% url 'play'  %}"> Play          </a>  </li>
+            <li> <a class="navlink" href="{% url 'home'  %}"> Home  </a> </li>
+            <Li> <a class="navlink" href="{% url 'about'  %}"> About        </a> </Li>
+            
+        </ul>
+    
+    </nav>
+
+    <script>
+
+        $(".navlink").click(function(){
+
+            localStorage.clear()
+
+        })
+
+    </script>
+
+<div class="options">
+
+    <form>
+    <div>
+
+
+        <h1> Number of Rounds </h1>
+
+        <label> Minimun of 3, Maximun of 20
+            <input type="number" min="3" max="20" step="1" value="3" id="iterations" class="rounds" name="rounds">
+
+        </label>
+   
+    </div>
+
+    <div>
+
+        <h1> Gender Preferences </h1>
+
+
+            <input type="radio" id="male" name="gender" value="Male" class="gender" required>
+                <label for="male">Male</label>
+    
+            <input type="radio" id="female" name="gender" value="Female" class="gender" required>
+                <label for="female">Female</label>
+            
+            <input type="radio" id="both" name="gender" value="both" class="gender" required>
+                <label for="both"> Both </label>
+
+            <br>
+
+            <button onclick="setmax()" id="okbutton" type="submit" name="confirmation" value="omegalol"> Play with these settings </button>
+    </div>
+    </form>
+
+    <script>
+
+            function setmax(){
+
+                localStorage.setItem('rounds', $("#iterations").val())
+                console.log(localStorage.getItem('rounds'))
+
+            }
+
+    </script>
+
+</div>
+
+
+</body>

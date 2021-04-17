@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="{%  static 'CSS/play.css' %}">
+    <script src="{% static 'JS/jquery-3.6.0.min.js' %}"> </script>
+
+    <title>Play</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1> Fuck, Marry, Kill!</h1>
+
+    </header>
+
+    <nav>
+
+    <script>
+
+        $(".navlink").click(function(){
+    
+            localStorage.clear()
+    
+        })
+    
+    </script>
+
+        <ul>
+
+            <li> <a class="navlink" href="{% url 'home'  %}"> Home     </a>  </li>
+            <li> <a class="navlink" href="{% url 'settings'  %}"> Settings </a> </li>
+            <Li> <a class="navlink" href="{% url 'about'  %}"> About    </a> </Li>
+            
+        </ul>
+    
+    </nav>
+
+    <div class="wrapper">
+
+        <div class="Char_Box">  
+
+                <div class="char"> 
+
+                    <img src=" {{ char1.image }}">
+
+                    <h4 id="char1name"> {{ char1.name }} </h4>
+                    <h4> {{ char1.gender }} </h4>
+        
+                </div>
+        
+                <div class="char"> 
+    
+                    <img src=" {{ char2.image }}">
+
+                    <h4 id="char2name"> {{ char2.name }} </h4>
+                    <h4> {{ char2.gender }} </h4>
+
+                </div>
+        
+                <div class="char"> 
+                    
+                    <img src=" {{ char3.image }}">
+
+                    <h4 id="char3name"> {{ char3.name }} </h4>
+                    <h4> {{ char3.gender }} </h4>
+        
+                </div>
+
+        </div>
+
+        <div class="Button_Box">
+
+            <div class="Button_Col"> 
+             
+                <button id="F1" class="Fuck" value="{{char1.name}}"> Fuck </button>
+                <button id="M1" class="Marry" value="{{char1.name}}"> Marry </button>
+                <button id="K1" class="Kill" value="{{char1.name}}"> Kill </button>
+
+            </div>
+
+            <div class="Button_Col"> 
+
+                <button id="F2" class="Fuck" value="{{char2.name}}"> Fuck </button>
+                <button id="M2" class="Marry" value="{{char2.name}}"> Marry </button>
+                <button id="K2" class="Kill" value="{{char2.name}}"> Kill </button>
+
+            </div>
+
+            <div class="Button_Col"> 
+
+                <button id="F3" class="Fuck" value="{{char3.name}}"> Fuck </button>
+                <button id="M3" class="Marry" value="{{char3.name}}"> Marry </button>
+                <button id="K3" class="Kill" value="{{char3.name}}"> Kill </button>
+
+            </div>
+
+        </div>
+
+        <div class="Logic_Box">
+
+        </div>
+
+    </div>
+
+    <button id="submit" onclick="check()"> CHECK </button>
+
+    <script src="{% static 'JS/play.js' %}">  </script>
+
+</body>
+
+
+</html>

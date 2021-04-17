@@ -1,0 +1,169 @@
+body{
+
+    background: linear-gradient(90deg, #732673, #e0a6da);
+}
+
+/*
+    Title
+*/
+
+header{
+
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+    color: white;
+    margin: 10px 10vw;
+    padding: 5px 5px;
+
+    background: linear-gradient(120deg,lightblue, royalblue);
+    text-align: center;
+
+    border-radius: 75px;
+}
+
+/*
+    Navegation Bar
+*/
+
+nav{
+
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    margin: 0px 10vw;
+    background: #e6297b;
+    border-radius: 75px;
+    text-align: center;
+}
+
+nav ul{
+
+    margin: 0px;
+    padding: 10px;
+}
+
+
+nav li{
+    
+    display: inline;
+    list-style: none;
+    margin: 0px 15vh;
+}
+
+nav a{
+
+    color: white;
+    text-decoration: none;
+}
+
+nav a:visited{
+    
+    color: white;
+    text-decoration: none;
+}
+
+/*
+    CSS Grid
+*/
+
+
+.wrappers{
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    margin: 10px 5vw;
+    border-radius: 25px;
+    border-style: solid;
+
+}
+
+.wrappers h3{
+
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: white;
+}
+
+.wrappers img{
+
+    margin: 10px 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+    padding: 25px;
+
+}
+
+/*
+    Cards
+*/
+
+
+#fuck{
+
+    background: linear-gradient(75deg, #e6297b, #ffc1bd);
+}
+
+#marry{
+
+    background: linear-gradient(90deg, #ffbff4, #8c3dd1);
+}
+
+#kill{
+   
+    background: linear-gradient(75deg, #f5f5f5, #3a84cf);
+}
+
+/*
+    Texts 
+*/
+
+#fuck_table{
+
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(75deg, #e6297b, #ffc1bd);
+
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+    padding: 15px;
+    border-radius: 25px;
+
+    min-width: 200px;
+
+}
+
+#marry_table{
+
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(90deg, #ffbff4, #8c3dd1);
+
+
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+    padding: 15px;
+    border-radius: 25px;
+
+    min-width: 200px;
+
+}
+
+#kill_table{
+
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(75deg, #f5f5f5, #3a84cf);
+
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+    padding: 15px;
+    border-radius: 25px;
+
+    min-width: 200px;
+
+}

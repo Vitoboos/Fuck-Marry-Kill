@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="{%  static 'CSS/results.css' %}">
+    <script src="{% static 'JS/jquery-3.6.0.min.js' %}"> </script>
+
+    <title> Home </title>
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1> Fuck, Marry, Kill!</h1>
+
+    </header>
+
+    <nav>
+
+        <ul>
+
+            <li> <a class="navlink" href="{% url 'play'  %}"> Play </a>  </li>
+            <li> <a class="navlink" href="{% url 'settings'  %}"> Settings              </a> </li>
+            <Li> <a class="navlink" href="{% url 'about'  %}"> About                 </a> </Li>
+            
+        </ul>
+
+
+    </nav>
+
+    <script>
+
+        $(".navlink").click(function(){
+
+            localStorage.clear()
+
+        })
+
+    </script>
+
+    
+    <div class="wrappers">
+        <img src="media/images/fuck.png" id="fuck">
+
+        <div class="chars">
+
+            <h3> Characters</h3>
+
+            <table id="fuck_table">
+
+                <script> 
+                                   
+                    var fuckbox = JSON.parse(localStorage.getItem("fuck_box"));
+                    var iterations = fuckbox.length;
+
+                        for(var i = 0; i < iterations; i++){
+                    
+                            $("#fuck_table").append("<tr><td>"+fuckbox[i]+"</td></tr>");
+
+                        }
+        
+                </script>
+
+            </table>
+
+        </div>
+    </div>
+
+    
+    </div>
+
+    <div class="wrappers">
+        <img src="media/images/marry.png" id="marry">
+
+        <div class="chars">
+
+            <h3> Characters</h3>
+
+            <table id="marry_table">
+
+                <script> 
+                                   
+                    var marrybox = JSON.parse(localStorage.getItem("marry_box"));
+                    var iterations = marrybox.length;
+
+                        for(var i = 0; i < iterations; i++){
+                    
+                            $("#marry_table").append("<tr><td>"+marrybox[i]+"</td></tr>");
+
+                        }
+        
+                </script>
+
+            </table>
+
+        </div>
+    </div>
+
+    <div class="wrappers">
+
+        <img src="media/images/kill.png" id="kill">
+
+        <div class="chars">
+
+            <h3> Characters</h3>
+
+            <table id="kill_table">
+
+                <script> 
+                                   
+                    var killbox = JSON.parse(localStorage.getItem("kill_box"));
+                    var iterations = killbox.length;
+
+                        for(var i = 0; i < iterations; i++){
+                    
+                            $("#kill_table").append("<tr><td>"+killbox[i]+"</td></tr>");
+
+                        }
+        
+                </script>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    </body>

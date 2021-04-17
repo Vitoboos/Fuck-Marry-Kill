@@ -1,0 +1,207 @@
+body{
+
+    background: linear-gradient(90deg, #732673, #e0a6da);
+}
+
+/*
+    Title
+*/
+
+header{
+
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+    color: white;
+    margin: 10px 10vw;
+    padding: 5px 5px;
+
+    background: linear-gradient(120deg,lightblue, royalblue);
+    text-align: center;
+
+    border-radius: 75px;
+}
+
+/*
+    Navegation Bar
+*/
+
+nav{
+
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    margin: 0px 10vw;
+    background: #e6297b;
+    border-radius: 75px;
+    text-align: center;
+}
+
+nav ul{
+
+    margin: 0px;
+    padding: 10px;
+}
+
+
+nav li{
+    
+    display: inline;
+    list-style: none;
+    margin: 0px 15vh;
+}
+
+nav a{
+
+    color: white;
+    text-decoration: none;
+}
+
+nav a:visited{
+    
+    color: white;
+    text-decoration: none;
+}
+
+/*
+    Content Box
+*/
+
+
+.Char_Box{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.Char_Box img{
+
+    width: 325px;
+    height: 325px;
+    display: block;
+    margin: 5px auto;
+    border-radius: 25px;
+}
+
+.char{
+
+    margin: 5px 5px;
+    border-style: solid;
+    background: white;
+    opacity: 0.85;
+    
+}
+
+.char:hover{
+
+    opacity: 1;
+
+}
+
+.char h4{
+
+    text-align: center;
+}
+
+/*
+    Buttons
+*/
+
+
+.Button_Box{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.Button_Col{
+
+    margin: 5px 10px;
+
+    background: #fabc12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-style: solid;
+    border-width: thin;
+    border-radius: 50px;
+}
+
+button:active{
+
+    background-color: #3e8e41;
+    transform: translateY(4px);
+}
+
+/*
+    FMK Buttons
+*/
+
+
+.Fuck{
+
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    padding: 15px 30px;
+    margin: 0px 5px;        
+    background: #D71414;
+
+    border-style: solid;
+    border-width: thin;
+    border-radius: 50px;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.Marry{
+
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    padding: 15px 30px;
+    margin: 0px 5px;    
+    background: #5C38BC;
+
+    border-style: solid;
+    border-width: thin;
+    border-radius: 50px;
+
+    outline: none;
+    cursor: pointer;
+}
+
+
+.Kill{
+
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    padding: 15px 30px;
+    margin: 0px 5px;
+    background: royalblue;
+
+    border-style: solid;
+    border-width: thin; 
+    border-radius: 50px;
+
+    outline: none;
+    cursor: pointer;
+}
+
+
+/*
+    FMK Buttons ID
+*/
+
+.active{
+
+    background-color: #3e8e41;
+}
+
+
+/*
+    Wrapper
+*/
+
+.wrapper{
+
+    margin: 15px 10vw;
+}
